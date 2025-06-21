@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri','Trebuchet MS','sans-serif';
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+.search-area{
+    width: 100%;
+    height: 350px;
+    background-image: url("bg.jpg");
+    background-size: 100% 100%;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.content h1{
+    color: white;
+    font-size: 4vw;
+}
+.content p{
+    color: white;
+    font-size: 2vw;
+}
+.search-box{
+    width: 60%;
+    height: 14%;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+}
+.search-box input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+}
+.btn{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 10px;
+}
+.search-box button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: aqua; */
+    border: none;
+    font-size: 22px;
+}
+
+.btn-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(10,30,111);
+    border: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.btn button:hover{
+    background-color: rgb(10,30,111,0.566);
+}
+
+     /* STyling gallery section */
+
+     /* yaha pe imaginary effect bana re hai  */
+     .image-gallery{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 20px;
+     }
+     .image-gallery .images{   
+          columns: 5 250px;
+          max-width: 95%;  /* side side se thoda gap rahega*/
+          margin-top: 20px;
+
+     }
+     .photo{
+        width: 100%;
+        transition: all 0.5s;;
+      
+     }
+
+     .image{
+        overflow: hidden;
+        margin-bottom: 10px;
+        list-style: none;
+        position: relative;
+        cursor: pointer;
+     }
+     .photo:hover{
+        scale: 110%;
+     }
+     /* .image .details{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(to top,black,transparent);
+     } */
+      .image .details{
+        position: absolute;
+        bottom: -100px;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: aliceblue;
+        background: linear-gradient(to top,black,transparent);
+        padding: 20px;
+        color: white;
+        transition: all 0.5s;
+      }
+      .image:hover .details{
+        bottom: 0;
+      }
+      .details .user{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+       
+      }
+
+      .download img{
+        padding: 4px;
+        background-color: rgb(10,30,111);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .download img:hover{
+        background-color: rgb(10,30,111,0.566);
+      }
+
+          /* For button */
+
+          #load{
+            width: 100px;
+            padding: 20px;
+            background-color: rgb(10,30,111);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            color: white;
+            font-size: 20px;
+            display: none;
+                    
+          }
+          #load:hover{
+            background-color: rgba(10,30,111,0.566);
+          }
+
+          /* media query */
+
+          /* ✅ Mobile Devices: Up to 600px */
+@media (max-width: 600px) {
+  .search-box {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .search-box button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .content h1 {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .content p {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .image-gallery .images {
+    columns: 1;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .details .user {
+    gap: 5px;
+  }
+
+  .download img {
+    margin-top: 8px;
+  }
+}
+
+/* ✅ Tablets: 601px - 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .search-box {
+    width: 80%;
+  }
+
+  .content h1 {
+    font-size: 5vw;
+  }
+
+  .content p {
+    font-size: 3vw;
+  }
+
+  .image-gallery .images {
+    columns: 2;
+  }
+}
+
+/* ✅ Medium Desktops: 1025px - 1400px */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .image-gallery .images {
+    columns: 3;
+  }
+}
+
+
+             /* Footer Styles */
+  
+.footer {
+    background-color: #111;
+    color: #f1f1f1;
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-col {
+    flex: 1 1 300px;
+    margin: 10px 20px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #aaa;
+}
